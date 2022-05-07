@@ -3,8 +3,8 @@
 import { createElement as h, useContext } from "react";
 import TransferContext from "ruck/TransferContext.mjs";
 
-import Heading, { css as cssHeading } from "./Heading.mjs";
-import Para, { css as cssPara } from "./Para.mjs";
+import Heading, { css as cssHeading } from "device-agnostic-ui/Heading.mjs";
+import Html, { css as cssPara } from "device-agnostic-ui/Html.mjs";
 
 // Export CSS URLs for the component and its dependencies.
 export const css = new Set([
@@ -32,6 +32,6 @@ export default function PageError({ status, title, description }) {
     "section",
     { className: "PageError__section" },
     h(Heading, null, title),
-    h(Para, null, description),
+    h(Html, null, description),
   );
 }
